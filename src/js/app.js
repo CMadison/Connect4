@@ -75,6 +75,7 @@ var e6 = document.getElementById('e6');
 var f6 = document.getElementById('f6');
 var g6 = document.getElementById('g6');
 
+
 // console.log(a1.value)
 //     a1.addEventListener('click', function(event) {
 //         if (a1.innerHTML === "") {
@@ -96,7 +97,11 @@ var g6 = document.getElementById('g6');
 
 var playerOneTurn = true;
 
-console.log(gbArray)
+console.log(gbArray);
+
+
+
+/* This is working code, do not touch
 
 $("#a0").on('click', function() { // put this into a modular function that can be called for any event.
 if (gbArray[6][0] === 0) {
@@ -116,11 +121,39 @@ if (gbArray[6][0] === 0) {
     };
 
 });
+*/
+// create a for loop that checks each array position in a column and runs logic if not null check next cell in column else set gbarray = to space in which
 
+$("#a0").on('click', function() { // put this into a modular function that can be called for any event.
+for (var i = 6; i >= 0; i--) {
+  if (gbArray[i][0] !== 0) {
+  }
+  else if (playerOneTurn === true) {
+    gbArray[i][0] = 1;
+    // update div with game piece (a1.innerHTML = "X";)
+    playerOneTurn = !playerOneTurn;
+    console.log(gbArray);
+    console.log(playerOneTurn);
+    return (gbArray[6][0]);
+    }
+  else {
+    gbArray[i][0] = 2;
+    // update div with game piece (a1.innerHTML = "X";)
+    playerOneTurn = !playerOneTurn;
+    console.log(gbArray);
+    console.log(playerOneTurn);
+    return (gbArray[6][0]);
+}
 
+        // Win state
+        // 1. Should check all divs to see which div has text
+        // 2. Should check if text is ==== "x" or "o"
+        // 3. Should
+    };
 
 });
 
+});
   // $("#a7").html('<img src="/css/assets/Red Piece_CWF.png"/>');
 
 
