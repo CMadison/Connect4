@@ -53,7 +53,7 @@ for (var i = 6; i >= 0; i--) {
   }
   else if (playerOneTurn === true) {
     gbArray[col][i] = 1;
-    $("#00").css("background-color","red");
+    $("#"+col+i).css("background-color","red");
     playerOneTurn = !playerOneTurn;
     console.log(gbArray);
     console.log(playerOneTurn);
@@ -61,7 +61,7 @@ for (var i = 6; i >= 0; i--) {
     }
   else {
     gbArray[col][i] = 2;
-    $("#01").css("background-color","blue");
+    $("#"+col+i).css("background-color","blue");
     playerOneTurn = !playerOneTurn;
     console.log(gbArray);
     console.log(playerOneTurn);
