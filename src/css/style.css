@@ -1,21 +1,16 @@
 h1 {
   text-align: center;
 }
+#container {
+  height: 1000px
+}
 #gameBoard {
   margin: auto;
-  height: 602px;
+  height: 600px;
   width: 600px;
-  background: url(/css/assets/Gameboard_CWF.png) no-repeat;
-  background-size: contain;
+  background-color: orange;
   z-index: -1;
-}
-
-#container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 350px;
-  height: 350px;
+  padding-left: 5px;
 }
 .cell {
     display: inline-block;
@@ -24,9 +19,59 @@ h1 {
     background-color: #e6e6e6;
     margin: 10px;
     padding: 30px;
-    vertical-align: top;
+    border-radius: 100px;
 }
 
 #newGameBtn {
-  margin-left: 600px;
+  background: #d934b8;
+  background-image: -webkit-linear-gradient(top, #d934b8, #892cb8);
+  background-image: -moz-linear-gradient(top, #d934b8, #892cb8);
+  background-image: -ms-linear-gradient(top, #d934b8, #892cb8);
+  background-image: -o-linear-gradient(top, #d934b8, #892cb8);
+  background-image: linear-gradient(to bottom, #d934b8, #892cb8);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-top: 50px;
+  margin-left: 170px;
+}
+
+#newGameBtn:hover {
+  background: #ea3cfa;
+  background-image: -webkit-linear-gradient(top, #ea3cfa, #a234d9);
+  background-image: -moz-linear-gradient(top, #ea3cfa, #a234d9);
+  background-image: -ms-linear-gradient(top, #ea3cfa, #a234d9);
+  background-image: -o-linear-gradient(top, #ea3cfa, #a234d9);
+  background-image: linear-gradient(to bottom, #ea3cfa, #a234d9);
+  text-decoration: none;
+}
+#row0 {
+  border: 2px solid purple;
+  padding-top: 15px;
+}
+h1 {
+  margin: 50px;
+}
+.p1 {
+display: inline-block;
+    max-width: 42px;
+    max-height: 42px;
+    background-color: red;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 100px;
+}
+.p2 {
+  display: inline-block;
+    max-width: 42px;
+    max-height: 42px;
+    background-color: blue;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 100px;
 }
