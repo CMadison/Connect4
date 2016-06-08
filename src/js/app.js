@@ -58,8 +58,8 @@ for (var row = 6; row >= 0; row--) {
     console.log(gbArray);
     console.log(playerOneTurn);
 
-// vertical win
-        if (gbArray[col][row] == gbArray[col][row+1] && gbArray[col][row] == gbArray[col][row+2] && gbArray[col][row] == gbArray[col][row+3]) {
+// vertical win or right win
+        if (gbArray[col][row] == gbArray[col][row+1] && gbArray[col][row] == gbArray[col][row+2] && gbArray[col][row] == gbArray[col][row+3] || (gbArray[col][row] == gbArray[col-1][row] && gbArray[col][row] == gbArray[col-2][row] && gbArray[col][row] == gbArray[col-3][row]) ||) {
           alert("Player 1 is the winner");
         }
     return (gbArray[col][row]);
