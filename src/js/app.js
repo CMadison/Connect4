@@ -48,24 +48,29 @@ function playpiece() {
   var coords = id.split("")
   var col = parseInt(coords[0])
 
-for (var i = 6; i >= 0; i--) {
-  if (gbArray[col][i] !== 0) {
+for (var row = 6; row >= 0; row--) {
+  if (gbArray[col][row] !== 0) {
   }
   else if (playerOneTurn === true) {
-    gbArray[col][i] = 1;
-    $("#"+col+i).css("background-color","red");
+    gbArray[col][row] = 1;
+    $("#"+col+row).css("background-color","red");
     playerOneTurn = !playerOneTurn;
     console.log(gbArray);
     console.log(playerOneTurn);
-    return (gbArray[col][6]);
+
+// vertical win
+        if (gbArray[col][row] == gbArray[col][row+1] && gbArray[col][row] == gbArray[col][row+2] && gbArray[col][row] == gbArray[col][row+3]) {
+          alert("Player 1 is the winner");
+        }
+    return (gbArray[col][row]);
     }
   else {
-    gbArray[col][i] = 2;
-    $("#"+col+i).css("background-color","blue");
+    gbArray[col][row] = 2;
+    $("#"+col+row).css("background-color","blue");
     playerOneTurn = !playerOneTurn;
     console.log(gbArray);
     console.log(playerOneTurn);
-    return (gbArray[col][6]);
+    return (gbArray[col][row]);
 }
 
 // Create 3 seperate functions to test for winning conditions (horizontal, vertical, and diagonal). All should be in one overarching function to test winning condition.
@@ -87,7 +92,7 @@ for (var i = 6; i >= 0; i--) {
 
 
 
-// Extra Code that works
+// Extra Code that works dont touch
 
 
 // Gameboard
