@@ -79,7 +79,10 @@ for (var i = 6; i >= 0; i--) {
     };
 
 }
-
+// new game button reloads the page to start a new game
+   $('#newGameBtn').click(function() {
+    location.reload();
+    });
 });
 
 
