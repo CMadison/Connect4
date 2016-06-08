@@ -59,7 +59,7 @@ for (var row = 6; row >= 0; row--) {
     console.log(playerOneTurn);
 
 // vertical win or right win
-        if (gbArray[col][row] == gbArray[col][row+1] && gbArray[col][row] == gbArray[col][row+2] && gbArray[col][row] == gbArray[col][row+3] || (gbArray[col][row] == gbArray[col-1][row] && gbArray[col][row] == gbArray[col-2][row] && gbArray[col][row] == gbArray[col-3][row]) ||) {
+        if (/*south win*/gbArray[row+1]&&gbArray[col][row] == gbArray[col][row+1] && gbArray[row+2]&&gbArray[col][row] == gbArray[col][row+2] && gbArray[row+3]&&gbArray[col][row] == gbArray[col][row+3] || /*west win*/(gbArray[col-1]&&gbArray[col][row] == gbArray[col-1][row]) && gbArray[col-2]&&gbArray[col][row] == gbArray[col-2][row] && gbArray[col-3]&&gbArray[col][row] == gbArray[col-3][row] || /*north win*/gbArray[row-1]&&gbArray[col][row] == gbArray[col][row-1] && gbArray[row-2]&&gbArray[col][row] == gbArray[col][row-2] && gbArray[row-3]&&gbArray[col][row] == gbArray[col][row-3] || /*east win*/gbArray[col+1]&&gbArray[col][row] == gbArray[col+1][row] && gbArray[col+2]&&gbArray[col][row] == gbArray[col+2][row] && gbArray[col+3]&&gbArray[col][row] == gbArray[col+3][row]) {
           alert("Player 1 is the winner");
         }
     return (gbArray[col][row]);
