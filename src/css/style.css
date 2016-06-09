@@ -8,7 +8,7 @@ h1 {
   margin: auto;
   height: 600px;
   width: 600px;
-  background-color: orange;
+  background-color: grey;
   z-index: -1;
   padding-left: 5px;
 }
@@ -16,7 +16,7 @@ h1 {
     display: inline-block;
     max-width: 42px;
     max-height: 42px;
-    background-color: #e6e6e6;
+    background-color: white;
     margin: 10px;
     padding: 30px;
     border-radius: 100px;
@@ -51,7 +51,6 @@ h1 {
   text-decoration: none;
 }
 #row0 {
-  border: 2px solid purple;
   padding-top: 15px;
 }
 h1 {
