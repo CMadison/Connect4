@@ -25,3 +25,4 @@ The rules of the game are easy to learn, but difficult to master. That is the be
 * Add more attractive alert pop up for starting a new game
 * Refactor code to make it more modular i.e. displaying which player actually won vs. a generic you won message
 * Properly indent and comment
+* Remove unused code
